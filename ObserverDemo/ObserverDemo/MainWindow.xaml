@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ObserverDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="191.333" Width="526.999">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="170"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Text:" Margin="10" Width="150"/>
+        <Label Content="Progess:" Grid.Row="1" Margin="10" Width="150"/>
+        <TextBox x:Name="textBoxNumber" Grid.Column="1" TextWrapping="Wrap" Margin="10" Width="150"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="1" Margin="10" Width="150"/>
+        <CheckBox x:Name="checkBoxTextObserver" Content="" Grid.Column="2" Margin="10,16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <CheckBox x:Name="checkBoxProgressbarObserver" Content="" Grid.Column="2" Grid.Row="1" Margin="10,16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="buttonCreateNumber" Content="Create Number" Grid.Column="2" Grid.Row="2" Margin="25,10" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
     </Grid>
 </Window>
